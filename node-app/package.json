@@ -1,0 +1,15 @@
+{
+  "name": "hello-pluralsighters",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Demo app for Pluralsight courses and DockerDeep Dive book",
+  "main": "app.js",
+  "author": "Nigel Poulton <nigelpoulton@hotmail.com>",
+  "license": "You'd have to be mad to use this in production :-D",
+  "dependencies": {
+    "express": "4.15.5",
+    "pug": "2.0.0-rc.4",
+    "mocha": "3.5.3",
+    "supertest": "3.0.0"
+  }
+}
