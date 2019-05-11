@@ -73,7 +73,7 @@ $ docker image ls
 
 You now have a newly built image with the app inside. Run a container from the image and test the app.
 
-$ docker container run -d --name=web1 -p=8080:80 static-web:latest
+$ docker container run -d --name=web1 -p=8080:80 ameenalam/static-web:latest
 
 Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 8080. You will see the following web page.
 
