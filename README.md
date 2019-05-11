@@ -56,13 +56,14 @@ You now have a newly built image with the app inside. Run a container from the i
 
 $ docker container run -d --name=web2 -p=9000:8080 node-app:latest
 
-Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 8080. You will see the following web page.
+Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 9000. You will see the following web page.
 
 http://localhost:9000/
 
 ----------------------------------------------------
 
-If you are working from a freshly installed Docker host it will have no images and will look like the output above. Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the ameenalam/static-web:latest.
+If you are working from a freshly installed Docker host it will have no images and will look like the output above.
+Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the ameenalam/static-web:latest.
 
 $ docker image pull ameenalam/static-web:latest
 
@@ -80,7 +81,7 @@ http://localhost:8080/
 
 ----------------------------------------------------
 
-If you are working from a freshly installed Docker host it will have no images and will look like the output above. Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the ameenalam/static-web:latest.
+Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the ameenalam/nodeapp:latest.
 
 $ docker image pull ameenalam/nodeapp:latest
 
@@ -92,6 +93,6 @@ You now have a newly built image with the app inside. Run a container from the i
 
 $ docker container run -d --name=web2 -p=9000:80 ameenalam/nodeapp:latest
 
-Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 8080. You will see the following web page.
+Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 9000. You will see the following web page.
 
 http://localhost:9000/
