@@ -1,4 +1,4 @@
-Deploy Application using Docker with Nginx
+**Deploy Application using Docker with Nginx**
 
 Install Docker.
 
