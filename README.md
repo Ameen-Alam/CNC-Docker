@@ -1,98 +1,150 @@
-**Deploy Application using Docker with Nginx**
+# Install Docker with Linux
 
-Install Docker.
+*There are two ways of installing it. The official docker way is a bit more recent.*
 
-$ sudo apt-get install docker.io
+##### 1st way..
 
-Check Docker version.
+### A) Official Ubuntu Repositories
 
-$ docker -v
+`$ sudo apt-get install docker.io`
 
-Run the docker image ls command on your Docker host.
+##### and after verify the installation
 
-$ docker image ls
+`$ docker -v`
 
-https://github.com/Ameen-Alam/CNC-Docker.git Clone the sample app from GitHub.
+`$ sudo docker run hello-world`
 
-$ git clone https://github.com/Ameen-Alam/CNC-Docker.git
+------------------------
 
-The clone operation creates a new directory called CNC-Docker . Change directory into CNC-Docker and list its contents.
+##### 2nd way
 
-$ cd CNC-Docker
+### (B) Official Docker Way
 
-static-app or node-app
+#### (1) Set up the docker repository and Install Docker CE
 
-$ cd static-app
+**Updating the apt package index**
 
-Instruction that is used to build an image. Use the docker image build command to create a new image using the instructions contained in the Dockerfile. This example creates a new Docker image called name:tag. Be sure to perform this command from within the directory containing the app code and Dockerfile.
+`$ sudo apt-get update`
 
-$ docker build -t static-web:latest .
+**Installing packages to allow apt to use a repository over HTTPS:**
 
-Check to make sure that the new static-web:latest image exists on your host.
+`$ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common`
 
-$ docker image ls
+**Adding Docker’s official key GPG**
 
-You now have a newly built image with the app inside. Run a container from the image and test the app.
+`$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
 
-$ docker container run -d --name=web1 -p=8080:80 static-web:latest
+**Verifying that you now have the key with fingerprint:**
 
-Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 8080. You will see the following web page.
+`$ sudo apt-key fingerprint 0EBFCD88`
+
+**sub-command below returns the name of your Ubuntu distribution**
+
+`$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
+
+**Updating the apt package index:**
+
+`$ sudo apt-get update`
+
+**Installing the latest version of Docker CE and containerd,**
+
+`$ sudo apt-get -y install docker-ce docker-ce-cli containerd.io`
+
+**and after verify the installation**
+
+`$ docker -v`
+
+`$ sudo docker run hello-world`
+
+###### Thankyou.
+
+# Deploy Application using Docker with Nginx
+
+**Run the docker image ls command on your Docker host.**
+
+`$ docker image ls`
+
+##### https://github.com/Ameen-Alam/CNC-Docker.git Clone the sample app from GitHub.
+
+`$ git clone https://github.com/Ameen-Alam/CNC-Docker.git`
+
+###### The clone operation creates a new directory called CNC-Docker . Change directory into CNC-Docker and list its contents.
+
+`$ cd CNC-Docker`
+
+**static-app or node-app**
+
+`$ cd static-app`
+
+*Instruction that is used to build an image. Use the docker image build command to create a new image using the instructions contained in the Dockerfile. This example creates a new Docker image called name:tag. Be sure to perform this command from within the directory containing the app code and Dockerfile.*
+
+`$ docker build -t static-web:latest .`
+
+**Check to make sure that the new static-web:latest image exists on your host.**
+
+`$ docker image ls`
+
+**You now have a newly built image with the app inside. Run a container from the image and test the app.**
+
+`$ docker container run -d --name=web1 -p=8080:80 static-web:latest`
+
+*Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 8080. You will see the following web page.*
 
 http://localhost:8080/
 
 ----------------------------------------------------
 
-$ cd node-app
+`$ cd node-app`
 
-Instruction that is used to build an image. Use the docker image build command to create a new image using the instructions contained in the Dockerfile. This example creates a new Docker image called name:tag. Be sure to perform this command from within the directory containing the app code and Dockerfile.
+*Instruction that is used to build an image. Use the docker image build command to create a new image using the instructions contained in the Dockerfile. This example creates a new Docker image called name:tag. Be sure to perform this command from within the directory containing the app code and Dockerfile.*
 
-$ docker build -t node-app:latest .
+`$ docker build -t node-app:latest .`
 
-Check to make sure that the new static-web:latest image exists on your host.
+**Check to make sure that the new static-web:latest image exists on your host.**
 
-$ docker image ls
+`$ docker image ls`
 
-You now have a newly built image with the app inside. Run a container from the image and test the app.
+**You now have a newly built image with the app inside. Run a container from the image and test the app.**
 
-$ docker container run -d --name=web2 -p=9000:8080 node-app:latest
+`$ docker container run -d --name=web2 -p=9000:8080 node-app:latest`
 
-Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 9000. You will see the following web page.
+*Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 9000. You will see the following web page.*
 
 http://localhost:9000/
 
 ----------------------------------------------------
 
-If you are working from a freshly installed Docker host it will have no images and will look like the output above.
-Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the ameenalam/static-web:latest.
+*If you are working from a freshly installed Docker host it will have no images and will look like the output above.
+Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the ameenalam/static-web:latest.*
 
-$ docker image pull ameenalam/static-web:latest
+`$ docker image pull ameenalam/static-web:latest`
 
-Check to make sure that the new static-web:latest image exists on your host.
+**Check to make sure that the new static-web:latest image exists on your host.**
 
-$ docker image ls
+`$ docker image ls`
 
-You now have a newly built image with the app inside. Run a container from the image and test the app.
+**You now have a newly built image with the app inside. Run a container from the image and test the app.**
 
-$ docker container run -d --name=web1 -p=8080:80 ameenalam/static-web:latest
+`$ docker container run -d --name=web1 -p=8080:80 ameenalam/static-web:latest`
 
-Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 8080. You will see the following web page.
+*Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 8080. You will see the following web page.*
 
 http://localhost:8080/
 
 ----------------------------------------------------
 
-Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the ameenalam/nodeapp:latest.
+*Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the ameenalam/nodeapp:latest.*
 
-$ docker image pull ameenalam/nodeapp:latest
+`$ docker image pull ameenalam/nodeapp:latest`
 
-Check to make sure that the new static-web:latest image exists on your host.
+**Check to make sure that the new static-web:latest image exists on your host.**
 
-$ docker image ls
+`$ docker image ls`
 
-You now have a newly built image with the app inside. Run a container from the image and test the app.
+**You now have a newly built image with the app inside. Run a container from the image and test the app.**
 
-$ docker container run -d --name=web2 -p=9000:80 ameenalam/nodeapp:latest
+`$ docker container run -d --name=web2 -p=9000:80 ameenalam/nodeapp:latest`
 
-Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 9000. You will see the following web page.
+*Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 9000. You will see the following web page.*
 
 http://localhost:9000/
