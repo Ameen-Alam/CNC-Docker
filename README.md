@@ -148,3 +148,28 @@ http://localhost:8080/
 *Open a web browser and navigate to the DNS name or IP address of the host that you are running the container from and point it to port 9000. You will see the following web page.*
 
 http://localhost:9000/
+
+-----------------------------------
+# Push images to Docker Cloud
+
+*Docker Cloud uses Docker Hub as its native registry for storing both public and private repositories. Once you push your images to Docker Hub, they are available in Docker Cloud.*
+
+__In order to get you started, let us get you a Docker ID.__
+
+https://hub.docker.com/
+
+**Log in to Docker Cloud using the docker login command.**
+
+`$ docker login`
+
+**Tag your image using docker tag.**
+
+`$ docker tag image_name username/image_name`
+
+**Push your image to Docker Hub using docker push (making the same replacements as in the previous step).**
+
+ $ docker push username/image_name
+
+
+*Check that the image you just pushed appears in Docker Cloud.
+Go to Docker Cloud and navigate to the Repositories tab and confirm that your image appears in this list.*
