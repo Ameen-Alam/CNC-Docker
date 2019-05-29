@@ -88,17 +88,17 @@ __two way to run a container__
 
 #### Build Image
 
-> <code> docker build -t &lt;image_name&gt;:&lt;tag&gt;</code> .
+> <code> docker build -t &lt;image_name&gt;:&lt;tag&gt; &lt;source_of_Dockerfile&gt;</code>
 
   `$ docker build -t static-web:latest .`
 
-#### docker images list
+#### Docker images list
 
   `$ docker image ls`
 
 #### Run Container
 
-> docker run --name <container_name> -p <host_port>:<container_port> <image_name>:<tag>
+> <code> docker run --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt; .</code>
 
   `$ docker container run -d --name=web1 -p=8080:80 static-web:latest`
 
@@ -119,17 +119,17 @@ Getting images onto your Docker host is called “pulling”. If you are followi
 
 #### To pull an image
 
-> docker pull <image_name>:<tag>
+> <code> docker pull &lt;image_name&gt;:&lt;tag&gt;</code>
 
-`$ docker image pull ameenalam/nodeapp:latest`
+  `$ docker image pull ameenalam/nodeapp:latest`
 
-#### docker images list
+#### Docker images list
 
   `$ docker image ls`
 
 #### Run Container
 
-> docker run --name <container_name> -p <host_port>:<container_port> <image_name>:<tag>
+> <code> docker run --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt; .</code>
 
   `$ docker container run -d --name=web2 -p=9000:80 ameenalam/nodeapp:latest`
 
