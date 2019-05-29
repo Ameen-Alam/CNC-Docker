@@ -88,11 +88,9 @@ __two way to run a container__
 
 #### Build Image
 
-> <pre><code>docker build -t <image_name>:<tag> .</code></pre>
+> docker build -t <image_name> : <tag> .
 
-  `
-$ docker build -t static-web:latest .
-`
+  `$ docker build -t static-web:latest .`
 
 #### docker images list
 
