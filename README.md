@@ -123,13 +123,9 @@ Getting images onto your Docker host is called “pulling”. If you are followi
 
 `$ docker image pull ameenalam/nodeapp:latest`
 
-**Check to make sure that the new static-web:latest image exists on your host.**
-
 #### docker images list
 
   `$ docker image ls`
-
-**You now have a newly built image with the app inside. Run a container from the image and test the app.**
 
 #### Run Container
 
