@@ -98,7 +98,7 @@ __two way to run a container__
 
 #### Run Container
 
-> <code> docker run --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt; .</code>
+> <code> docker run --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt;</code>
 
   `$ docker container run -d --name=web1 -p=8080:80 static-web:latest`
 
@@ -129,7 +129,7 @@ Getting images onto your Docker host is called “pulling”. If you are followi
 
 #### Run Container
 
-> <code> docker run --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt; .</code>
+> <code> docker run --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt;</code>
 
   `$ docker container run -d --name=web2 -p=9000:80 ameenalam/nodeapp:latest`
 
@@ -151,17 +151,23 @@ __In order to get you started, let us get you a Docker ID.__
 
 https://hub.docker.com/
 
+#### Docker login 
+
 > Log in to Docker Cloud using the docker login command.
 
 `$ docker login`
+
+#### Tag Image
 
 > Tag your image using docker tag.
 
 `$ docker tag image_name username/image_name`
 
+#### Push your image to Docker Hub
+
 > Push your image to Docker Hub using docker push (making the same replacements as in the previous step).
 
- $ docker push username/image_name
+ `$ docker push username/image_name`
 
 
 *Check that the image you just pushed appears in Docker Cloud.
