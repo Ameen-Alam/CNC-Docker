@@ -88,7 +88,7 @@ __two way to run a container__
 
 #### Build Image
 
-> docker build -t <image_name> : <tag> .
+> docker build -t <image_name> <tag> .
 
   `$ docker build -t static-web:latest .`
 
