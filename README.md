@@ -88,10 +88,7 @@ __two way to run a container__
 
 #### Build Image
 
-> docker build -t <pre><code>&lt;div class="footer"&gt;
-    &amp;
-&lt;/div&gt;
-</code></pre><image_name> <tag> .
+> docker build -t <pre><code>&lt;image_name&gt;:&lt;tag&gt;</code></pre> .
 
   `$ docker build -t static-web:latest .`
 
