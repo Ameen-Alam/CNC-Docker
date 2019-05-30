@@ -98,7 +98,7 @@ __two way to run a container__
 
 #### Run Container
 
-> <code> docker run --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt;</code>
+> <code> docker run -d --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt;</code>
 
   `$ docker container run -d --name=web1 -p=8080:80 static-web:latest`
 
@@ -129,7 +129,7 @@ Getting images onto your Docker host is called “pulling”. If you are followi
 
 #### Run Container
 
-> <code> docker run --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt;</code>
+> <code> docker run -d --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt;</code>
 
   `$ docker container run -d --name=web2 -p=9000:80 ameenalam/nodeapp:latest`
 
