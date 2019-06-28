@@ -39,7 +39,7 @@ Getting images onto your Docker host is called “pulling”. If you are followi
 
 > <code> docker run -d --name &lt;container_name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt;</code>
 
-  `$ docker container run -d --name=web2 -p=7000:80 ameenalam/nodeapp:latest`
+  `$ docker container run -d --name=web2 -p=7000:8080 ameenalam/nodeapp:latest`
 
 #### For Test
 
