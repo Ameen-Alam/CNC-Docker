@@ -1,5 +1,8 @@
 # Deploy Application using Docker with Nginx
 
+### Docker for Beginners Subscribe and share my YouTube channel
+> https://www.youtube.com/playlist?list=PLRnB5kp_ilgbsl8hJwhQXmSos8Ua9Tc_d
+
 > https://github.com/Ameen-Alam/CNC-Docker.git Clone the sample app from GitHub.
 
 `$ git clone https://github.com/Ameen-Alam/CNC-Docker.git`
