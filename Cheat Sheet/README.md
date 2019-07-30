@@ -20,6 +20,7 @@
 | docker start container_name | Start the stopped container |
 | docker rm container_name | Remove the container. |
 | docker logs container_name | fetch the logs of the container |
+| docker inspect container_name | Shows the detailed information about the container in JSON format. |
 | docker volume create my-vol | Create your Volume for Persistent Data |
 | docker volumes ls | List down the volumes |
 | docker volume inspect my-vol | inspect the volumes |
