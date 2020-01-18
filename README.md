@@ -1,5 +1,7 @@
 # Deploy Application using Docker with Nginx
 
+[Docker Deep Dive Book PDF](/Docker%20Deep%20Dive.pdf)
+
 ### Docker Tutorial
 
 > https://www.youtube.com/playlist?list=PLRnB5kp_ilgbsl8hJwhQXmSos8Ua9Tc_d
