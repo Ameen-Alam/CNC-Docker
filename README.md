@@ -2,13 +2,12 @@
 
 [Docker Deep Dive Book PDF](/Docker%20Deep%20Dive.pdf)
 
-### Docker Tutorial
+#### Docker Tutorial
 
-> https://www.youtube.com/playlist?list=PLRnB5kp_ilgbsl8hJwhQXmSos8Ua9Tc_d
+[Docker for beginners tutorial](https://www.youtube.com/playlist?list=PLRnB5kp_ilgbsl8hJwhQXmSos8Ua9Tc_d)
 
-------------------
 
-> https://github.com/Ameen-Alam/CNC-Docker.git Clone the sample app from GitHub.
+https://github.com/Ameen-Alam/CNC-Docker.git Clone the sample app from GitHub.
 
 `$ git clone https://github.com/Ameen-Alam/CNC-Docker.git`
 
@@ -28,7 +27,7 @@ __two way to run a container__
 
 --------------------------------
 
-### Start The Ops Perspective
+#### Start The Ops Perspective
 
 *If you are working from a freshly installed Docker host it will have no images and will look like the output above.
 Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the ameenalam/nodeapp:latest.*
