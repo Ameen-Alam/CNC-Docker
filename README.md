@@ -28,7 +28,7 @@ __two way to run a container__
 
 --------------------------------
 
-#### Start The Ops Perspective
+### Start The Ops Perspective
 
 *If you are working from a freshly installed Docker host it will have no images and will look like the output above.
 Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the ameenalam/nodeapp:latest.*
